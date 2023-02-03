@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a311d37c94062c14eb2461befeb5f02b
+guid: 183ae1364b9b955408ac05a1f693da15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2413806693520163455
-    second: Circle
+      213: -9095717837082945937
+    second: Capsule
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -132,123 +132,96 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Circle_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41ca64b132de5d84887346eb175b4181
-      internalID: -115092314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Circle_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9438a036f50f2a24f9ed4b5cdb9a6465
-      internalID: 1463401444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Circle_2
+      name: Capsule
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -33, y: 256}
+        - {x: -95, y: 223}
+        - {x: -128, y: 161}
+        - {x: -128, y: -161}
+        - {x: -95, y: -223}
+        - {x: -33, y: -256}
+        - {x: 33, y: -256}
+        - {x: 95, y: -223}
+        - {x: 128, y: -161}
+        - {x: 128, y: 161}
+        - {x: 95, y: 223}
+        - {x: 33, y: 256}
+      physicsShape:
+      - - {x: 0, y: 256}
+        - {x: -39, y: 249}
+        - {x: -75, y: 231}
+        - {x: -103, y: 203}
+        - {x: -121, y: 167}
+        - {x: -128, y: 128}
+        - {x: -128, y: -128}
+        - {x: -121, y: -167}
+        - {x: -103, y: -203}
+        - {x: -75, y: -231}
+        - {x: -39, y: -249}
+        - {x: 0, y: -256}
+        - {x: 39, y: -249}
+        - {x: 75, y: -231}
+        - {x: 103, y: -203}
+        - {x: 121, y: -167}
+        - {x: 128, y: -128}
+        - {x: 128, y: 128}
+        - {x: 121, y: 167}
+        - {x: 103, y: 203}
+        - {x: 75, y: 231}
+        - {x: 39, y: 249}
       tessellationDetail: 0
       bones: []
-      spriteID: b874e9faa6e3cdd4eb319d694adfa824
-      internalID: 1862094647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Circle_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1726dab4454ed0a48b0c85ed04814f25
-      internalID: -2071764919
+      spriteID: f669c7f71d485c180800000000000000
+      internalID: -9095717837082945937
       vertices: []
       indices: 
       edges: []
       weights: []
     outline:
-    - - {x: 33, y: 128}
-      - {x: -33, y: 128}
-      - {x: -95, y: 95}
-      - {x: -128, y: 33}
-      - {x: -128, y: -33}
-      - {x: -95, y: -95}
-      - {x: -33, y: -128}
-      - {x: 33, y: -128}
-      - {x: 95, y: -95}
-      - {x: 128, y: -33}
-      - {x: 128, y: 33}
-      - {x: 95, y: 95}
+    - - {x: -33, y: 256}
+      - {x: -95, y: 223}
+      - {x: -128, y: 161}
+      - {x: -128, y: -161}
+      - {x: -95, y: -223}
+      - {x: -33, y: -256}
+      - {x: 33, y: -256}
+      - {x: 95, y: -223}
+      - {x: 128, y: -161}
+      - {x: 128, y: 161}
+      - {x: 95, y: 223}
+      - {x: 33, y: 256}
     physicsShape:
-    - - {x: 0, y: 128}
-      - {x: -39, y: 121}
-      - {x: -75, y: 103}
-      - {x: -103, y: 75}
-      - {x: -121, y: 39}
-      - {x: -128, y: 0}
-      - {x: -121, y: -39}
-      - {x: -103, y: -75}
-      - {x: -75, y: -103}
-      - {x: -39, y: -121}
-      - {x: 0, y: -128}
-      - {x: 39, y: -121}
-      - {x: 75, y: -103}
-      - {x: 103, y: -75}
-      - {x: 121, y: -39}
-      - {x: 128, y: 0}
-      - {x: 121, y: 39}
-      - {x: 103, y: 75}
-      - {x: 75, y: 103}
-      - {x: 39, y: 121}
+    - - {x: 0, y: 256}
+      - {x: -39, y: 249}
+      - {x: -75, y: 231}
+      - {x: -103, y: 203}
+      - {x: -121, y: 167}
+      - {x: -128, y: 128}
+      - {x: -128, y: -128}
+      - {x: -121, y: -167}
+      - {x: -103, y: -203}
+      - {x: -75, y: -231}
+      - {x: -39, y: -249}
+      - {x: 0, y: -256}
+      - {x: 39, y: -249}
+      - {x: 75, y: -231}
+      - {x: 103, y: -203}
+      - {x: 121, y: -167}
+      - {x: 128, y: -128}
+      - {x: 128, y: 128}
+      - {x: 121, y: 167}
+      - {x: 103, y: 203}
+      - {x: 75, y: 231}
+      - {x: 39, y: 249}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
@@ -258,10 +231,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Circle_1: 1463401444
-      Circle_2: 1862094647
-      Circle_3: -2071764919
-      Circle_0: -115092314
+      Capsule: -9095717837082945937
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

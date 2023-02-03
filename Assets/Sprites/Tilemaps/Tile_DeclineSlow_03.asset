@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Circle_1
+  m_Name: Tile_DeclineSlow_03
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1463401444, guid: a311d37c94062c14eb2461befeb5f02b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb37340b99357b14a8b2ae6a7c3f4fea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
