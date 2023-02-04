@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float jumpStrength = 10f;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameInput input;
-    [SerializeField] CapsuleCollider2D collider;
+    [SerializeField] CapsuleCollider2D playerCollider;
 
 
     void OnEnable()
