@@ -14,8 +14,16 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] GameInput input;
     [SerializeField] CapsuleCollider2D playerCollider;
     [SerializeField] LayerMask groundLayer;
+    private bool isOnGround;
+    public bool IsOnGround{
+        get {
+            return isOnGround;
+        }
+        private set {
+            isOnGround=value;
+        }
 
-
+    }
     void OnEnable()
     {
         input.OnJumpInput += Jump;
@@ -26,6 +34,7 @@ public class PlayerControl : MonoBehaviour
     }
     void FixedUpdate()
     {
+        
         Vector3 moveDir = new Vector3(input.GetMovementVectorNormalized().x, 0, 0);
         if (moveDir != Vector3.zero) rb.AddForce(moveDir * moveSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
         else rb.AddForce(new Vector2(-rb.velocity.x / deccelerationMultiplier + rb.velocity.x, 0f) * Time.deltaTime, ForceMode2D.Force);
@@ -44,16 +53,16 @@ public class PlayerControl : MonoBehaviour
         }
     }
     void Update() {
-        IsGrounded();
+        isOnGround=IsGrounded();
     }
     public void Jump()
     {
-        if(IsGrounded()) {
+        if(isOnGround && (rb.velocity.y >= -7.5f && rb.velocity.y <=7.5f)) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             
         }
     }
-    public bool IsGrounded() {
+    private bool IsGrounded() {
         RaycastHit2D raycastHit=Physics2D.BoxCast(playerCollider.bounds.center, playerCollider.bounds.size*0.9f,0f,Vector2.down,groundedColliderOffset,groundLayer);
         Color rayColor;
         if(raycastHit.collider!=null) {
@@ -63,7 +72,7 @@ public class PlayerControl : MonoBehaviour
         Debug.DrawRay(playerCollider.bounds.center + new Vector3(playerCollider.bounds.extents.x,0), Vector2.down* (playerCollider.bounds.extents.y * groundedColliderOffset), rayColor);
         Debug.DrawRay(playerCollider.bounds.center - new Vector3(playerCollider.bounds.extents.x,0), Vector2.down* (playerCollider.bounds.extents.y * groundedColliderOffset), rayColor);
         Debug.DrawRay(playerCollider.bounds.center - new Vector3(playerCollider.bounds.extents.x, playerCollider.bounds.extents.y*groundedColliderOffset), Vector2.right* (playerCollider.bounds.extents.y), rayColor);
-        Debug.Log(raycastHit.collider);
+        // Debug.Log(raycastHit.collider);
         return raycastHit.collider!=null;
     }
 }

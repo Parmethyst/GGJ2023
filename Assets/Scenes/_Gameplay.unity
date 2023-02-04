@@ -312,8 +312,8 @@ MonoBehaviour:
   deccelerationMultiplier: 0.014
   velocityThreshold: 6
   brakePressure: 2000
-  jumpStrength: 0.5
-  groundedColliderOffset: 1.01
+  jumpStrength: 10
+  groundedColliderOffset: 0.3
   rb: {fileID: 196555737}
   input: {fileID: 196555741}
   playerCollider: {fileID: 196555736}
@@ -782,6 +782,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 5e43df3ab8a36474a8c7a4f6d5eae54c, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0e88aef7573bc7e43b3fdda799d5ea81, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 11
     m_Data: {fileID: 21300000, guid: 49d3b397e0502174db451107b7961e23, type: 3}
@@ -793,6 +795,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: eb37340b99357b14a8b2ae6a7c3f4fea, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: b6639479eb1331d49ac3d29957cbf8a3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 19
     m_Data:
