@@ -182,7 +182,9 @@ GameObject:
   - component: {fileID: 196555737}
   - component: {fileID: 196555736}
   - component: {fileID: 196555741}
+  - component: {fileID: 196555743}
   - component: {fileID: 196555740}
+  - component: {fileID: 196555742}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -203,8 +205,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.02547884, y: 0.038217902}
+  m_Size: {x: 1.2547865, y: 2.5860093}
   m_Direction: 0
 --- !u!50 &196555737
 Rigidbody2D:
@@ -225,7 +227,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &196555738
 SpriteRenderer:
@@ -268,7 +270,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 183ae1364b9b955408ac05a1f693da15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96a81efaf9cd224eb8dcb7939b820958, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -310,8 +312,14 @@ MonoBehaviour:
   deccelerationMultiplier: 0.014
   velocityThreshold: 6
   brakePressure: 2000
+  jumpStrength: 0.5
+  groundedColliderOffset: 1.01
   rb: {fileID: 196555737}
   input: {fileID: 196555741}
+  playerCollider: {fileID: 196555736}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &196555741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +332,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1db744635ec61847ae0d90191a5d1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &196555742
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196555735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49fc8bc7d33cf2a2cafe16781ff1bdf3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &196555743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196555735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3e2eb0442124e509923f543a1bf58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 196555738}
+  input: {fileID: 196555741}
+  animator: {fileID: 196555742}
+  player: {fileID: 196555740}
 --- !u!1 &424332959
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +500,7 @@ GameObject:
   - component: {fileID: 1173322617}
   - component: {fileID: 1173322616}
   - component: {fileID: 1173322618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +962,7 @@ GameObject:
   - component: {fileID: 1316083221}
   - component: {fileID: 1316083220}
   - component: {fileID: 1316083219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

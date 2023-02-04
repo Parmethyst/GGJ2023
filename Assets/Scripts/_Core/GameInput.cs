@@ -8,7 +8,7 @@ public class GameInput : MonoBehaviour
     public Action OnJumpInput;
     public bool IsJumpPressed { get; private set; }
 
-    void Awake()
+    void OnEnable()
     {
         IsJumpPressed = false;
         playerInput = new PlayerInput();
