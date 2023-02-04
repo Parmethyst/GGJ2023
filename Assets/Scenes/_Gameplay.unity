@@ -227,7 +227,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &196555738
 SpriteRenderer:
@@ -312,10 +312,14 @@ MonoBehaviour:
   deccelerationMultiplier: 0.014
   velocityThreshold: 6
   brakePressure: 2000
-  jumpStrength: 10
+  jumpStrength: 0.5
+  groundedColliderOffset: 1.01
   rb: {fileID: 196555737}
   input: {fileID: 196555741}
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 196555736}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &196555741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +367,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 196555738}
   input: {fileID: 196555741}
   animator: {fileID: 196555742}
+  player: {fileID: 196555740}
 --- !u!1 &424332959
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +500,7 @@ GameObject:
   - component: {fileID: 1173322617}
   - component: {fileID: 1173322616}
   - component: {fileID: 1173322618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +962,7 @@ GameObject:
   - component: {fileID: 1316083221}
   - component: {fileID: 1316083220}
   - component: {fileID: 1316083219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
