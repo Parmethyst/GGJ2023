@@ -8,9 +8,20 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float deccelerationMultiplier = 5f;
     [SerializeField] float velocityThreshold = 10f;
     [SerializeField] float brakePressure = 10f;
+    [SerializeField] float jumpStrength = 10f;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameInput input;
+    [SerializeField] CapsuleCollider2D collider;
 
+
+    void OnEnable()
+    {
+        input.OnJumpInput += Jump;
+    }
+    void OnDisable()
+    {
+        input.OnJumpInput -= Jump;
+    }
     void FixedUpdate()
     {
         Vector3 moveDir = new Vector3(input.GetMovementVectorNormalized().x, 0, 0);
@@ -28,5 +39,9 @@ public class PlayerControl : MonoBehaviour
 
             rb.AddForce(-brakeVelocity, ForceMode2D.Force);  // apply opposing brake force
         }
+    }
+    public void Jump()
+    {
+        rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Force);
     }
 }
