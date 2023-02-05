@@ -6,7 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu (SINGKAT).unity
+    guid: 9115992676caf7d4fa8a5a8ff33393cd
+  - enabled: 1
+    path: Assets/Scenes/lvl1.unity
+    guid: 65090576f3d1a634f941277ed5def1d4
+  - enabled: 1
+    path: Assets/Scenes/CREDITT SCREEN.unity
+    guid: 563ea630501f8564c887814b7051c838
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/_Intro.unity
+    guid: c5a1ff835b6b632fcbdbe17f810e9266
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/_Lv3.unity
+    guid: 67f35a6bbd45d13439e5b9749023de10
+  - enabled: 1
+    path: Assets/Scenes/Prototyping/_Ending.unity
+    guid: 7fda9c763bfe8104194bb0fcc63dd4e9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 6121832187a5e02468ce94db38824d9a, type: 2}
