@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class RoseBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject gasObject;
@@ -18,5 +18,6 @@ public class RoseBehaviour : MonoBehaviour
     public void OnPlayerHit() {
         gasObject.SetActive(false);
         roseAnimator.enabled=false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
