@@ -25,6 +25,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("lvl1");
     }
+    public void ChangeToLvl2() {
+        SceneManager.LoadScene("lvl 2");
+    }
     public void ChangeToLvl3()
     {
         SceneManager.LoadScene("_Lv3");
