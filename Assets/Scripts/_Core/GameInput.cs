@@ -6,6 +6,7 @@ public class GameInput : MonoBehaviour
 {
     private PlayerInput playerInput;
     public Action OnJumpInput;
+    public Action OnPauseInput;
     public bool IsJumpPressed { get; private set; }
 
     void OnEnable()
@@ -16,6 +17,7 @@ public class GameInput : MonoBehaviour
         playerInput.Player.Jump.performed += Jump_performed;
         playerInput.Player.Jump.started += Jump_started;
         playerInput.Player.Jump.canceled += Jump_cancelled;
+        playerInput.Player.Pause.performed+=Pause_performed;
     }
     void OnDisable()
     {
@@ -38,6 +40,10 @@ public class GameInput : MonoBehaviour
     private void Jump_cancelled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         IsJumpPressed = false;
+    }
+    private void Pause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnPauseInput?.Invoke();
     }
     public Vector2 GetMovementVectorNormalized()
     {
